@@ -1,4 +1,4 @@
-﻿﻿using Hwdtech;
+﻿using Hwdtech;
 using Gameserver.Interfaces;
 
 namespace Gameserver.Commands
