@@ -28,4 +28,4 @@ jobs:
         run: dotnet test ./Gameserver/Gameserver /p:CollectCoverage=true /p:CoverletOutput=TestResult/ /p:CoverletOutputFormat=cobertura
         
       - name: Checkstyle
-        run: dotnet format ./Gameserver/Gameserver/Gameserver.sln --verify-no-changes
+        run: dotnet format ./Gameserver/Gameserver.sln --verify-no-changes
