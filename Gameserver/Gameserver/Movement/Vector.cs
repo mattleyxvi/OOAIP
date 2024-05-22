@@ -27,6 +27,10 @@
         {
             return obj != null && _coords.SequenceEqual(((Vector)obj)._coords);
         }
-        public override int GetHashCode() => _coords.GetHashCode();
+        public override int GetHashCode()
+        {
+            var hash = _coords.Aggregate(unchecked((int)2166136261), (currentHash, component) => HashCode.Combine(currentHash, component.GetHashCode()));
+            return hash;
+        }
     }
 }
