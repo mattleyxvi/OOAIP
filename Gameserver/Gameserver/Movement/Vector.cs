@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace Gameserver.Movement
+﻿namespace Gameserver.Movement
 {
     public class Vector
     {
