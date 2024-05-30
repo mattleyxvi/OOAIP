@@ -25,11 +25,11 @@
         }
         public override bool Equals(object? obj)
         {
-            return obj != null && _coords.SequenceEqual(((Vector)obj)._coords);
+            return obj is Vector && _coords.SequenceEqual(((Vector)obj)._coords);
         }
         public override int GetHashCode()
         {
-            var hash = _coords.Aggregate(unchecked((int)2166136261), (currentHash, component) => HashCode.Combine(currentHash, component.GetHashCode()));
+            var hash = _coords.Aggregate((currentHash, component) => HashCode.Combine(currentHash, component.GetHashCode()));
             return hash;
         }
     }

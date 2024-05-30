@@ -23,8 +23,9 @@ namespace TVector
         {
             var A = new Vector(new int[] { 1, 2, 3 });
             var B = new Vector(new int[] { 1, 2 });
-
+            var C = 'a';
             Assert.NotEqual(A, B);
+            Assert.False(A.Equals(C));
         }
 
         [Fact]
