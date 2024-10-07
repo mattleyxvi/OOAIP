@@ -19,13 +19,13 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Restore Gameserver dependencies
-        run: dotnet restore ./Gameserver/Gameserver
+        run: dotnet restore ./Gameserver
 
       - name: Gameserver build
-        run: dotnet build ./Gameserver/Gameserver --no-restore /p:ContinuousIntegrationBuild=true
+        run: dotnet build ./Gameserver --no-restore /p:ContinuousIntegrationBuild=true
       
       - name: Gameserver test
-        run: dotnet test ./Gameserver/Gameserver /p:CollectCoverage=true /p:CoverletOutput=TestResult/ /p:CoverletOutputFormat=cobertura
+        run: dotnet test ./Gameserver /p:CollectCoverage=true /p:CoverletOutput=TestResult/ /p:CoverletOutputFormat=cobertura
         
       - name: Checkstyle
         run: dotnet format ./Gameserver/Gameserver.sln --verify-no-changes
