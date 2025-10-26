@@ -3,7 +3,7 @@ using Hwdtech;
 
 namespace Gameserver.Commands
 {
-    public class DeleteGameCommand: Interfaces.ICommand
+    public class DeleteGameCommand : Interfaces.ICommand
     {
         private readonly int _gameid;
         public DeleteGameCommand(int gameid)

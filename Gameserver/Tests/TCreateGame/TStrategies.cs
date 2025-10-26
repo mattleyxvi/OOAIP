@@ -73,7 +73,7 @@ namespace Tests.TCreateGame
 
             var getres = IoC.Resolve<Gameserver.Interfaces.IUObject>("Gamesver.UObject.Get", 1);
 
-            Assert.Equal(getres,obj.Object);
+            Assert.Equal(getres, obj.Object);
         }
 
         [Fact]
@@ -93,11 +93,11 @@ namespace Tests.TCreateGame
             var cmd = new Mock<Gameserver.Interfaces.ICommand>();
             var newcmd = new Mock<Gameserver.Interfaces.ICommand>();
             var inj = new Gameserver.Commands.InjectCmd(cmd.Object);
-            
+
             inj.Inject(newcmd.Object);
             inj.Execute();
 
-            cmd.Verify(c => c.Execute(),Times.Never());
+            cmd.Verify(c => c.Execute(), Times.Never());
             newcmd.Verify(cmd => cmd.Execute(), Times.Once());
 
         }

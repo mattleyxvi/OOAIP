@@ -1,5 +1,5 @@
-﻿using Gameserver.Interfaces;
-using Gameserver.Commands;
+﻿using Gameserver.Commands;
+using Gameserver.Interfaces;
 
 namespace Gameserver.Strategies
 {
@@ -8,7 +8,7 @@ namespace Gameserver.Strategies
         public object Strategy(params object[] args)
         {
             int gameid = (int)args[0];
-            return  new DeleteGameCommand(gameid);
+            return new DeleteGameCommand(gameid);
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using Gameserver.Interfaces;
-using Gameserver.Commands;
+﻿using Gameserver.Commands;
+using Gameserver.Interfaces;
 
 namespace Gameserver.Strategies
 {

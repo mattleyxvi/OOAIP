@@ -1,15 +1,15 @@
-﻿using Gameserver.Interfaces;
-using Gameserver.Commands;
+﻿using Gameserver.Commands;
+using Gameserver.Interfaces;
 using Hwdtech;
 
 namespace Gameserver.Strategies
 {
-    public class QueueTakeStrategy: IStrategy
+    public class QueueTakeStrategy : IStrategy
     {
         public object Strategy(params object[] args)
         {
             int gameid = (int)args[0];
-            var queue = IoC.Resolve<IQueue>("Gameserver.Get.Queue",gameid);
+            var queue = IoC.Resolve<IQueue>("Gameserver.Get.Queue", gameid);
             return new ActionCommand(() => { queue.Take(); });
         }
     }
