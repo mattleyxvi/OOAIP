@@ -11,7 +11,7 @@ namespace Gameserver.Commands
 
             foreach (var dep in dependencies)
             {
-                IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Gameserver.Command" + dep.Key, (object[] args) => dep.Value.Strategy(args)).Execute();
+                IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Gameserver.Command." + dep.Key, (object[] args) => dep.Value.Strategy(args)).Execute();
             }
         }
     }
