@@ -58,7 +58,7 @@ namespace Tests.TGameStartState
             var bulletCmd = new ShootCmd(bulletMock.Object);
             bulletCmd.Execute();
 
-            cmdMock.Verify(x  => x.Execute(), Times.Once());
+            cmdMock.Verify(x => x.Execute(), Times.Once());
         }
 
     }
